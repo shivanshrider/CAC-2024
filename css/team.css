@@ -1,0 +1,268 @@
+/* General Styling */
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  background-color: #fff;
+  padding-top: 60px; /* Adjust as needed for fixed navigation */
+}
+
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  max-height: fit-content;
+}
+
+.section-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #d9534f; /* Red color */
+}
+
+.section-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* Navigation Bar */
+.nav {
+  width: 100%;
+  height: 50px; /* Reduced height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000; /* Black background */
+  z-index: 1000;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+}
+.nav .main_list ul {
+  display: flex;
+  list-style: none;
+  justify-content: center; /* Horizontally center the list items */
+  align-items: center; /* Vertically center the list items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav .main_list ul li {
+  margin: 0 20px; /* Adjust margin between list items */
+}
+
+.nav .main_list ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  font-family: 'Raleway', sans-serif; /* Ensure consistent font */
+  font-weight: 700; /* Bold font weight */
+}
+
+.nav .main_list ul li a:hover {
+  color: #d9534f; /* Red color on hover */
+}
+
+
+.nav .media_button {
+  display: none; /* Hide initially on larger screens */
+}
+
+@media (max-width: 768px) {
+  .nav .main_list {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Black background */
+    text-align: center;
+  }
+
+  .nav .main_list.show_list {
+    display: block;
+  }
+
+  .nav .main_list ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav .main_list ul li {
+    margin: 10px 0;
+  }
+
+  .nav .main_list ul li a {
+    line-height: 2;
+  }
+
+  .nav .media_button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+/* Team Members Section */
+.team-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Rounded images */
+  border: 5px solid #d9534f; /* Red border */
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+.team-member h4 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.btn-social {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%; /* Rounded buttons */
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  margin-right: 10px; /* Adjust spacing between buttons */
+}
+
+.btn-social:hover {
+  background-color: #d9534f; /* Red background on hover */
+  border-color: #d9534f; /* Red border on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 576px) {
+  .section-heading {
+    font-size: 2.5rem;
+  }
+}
+
+.nav img {
+  height: 90px; /* Ensure the image height fits within the navigation bar */
+}
+
+button,
+button::after {
+ padding: 16px 20px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #000000;
+ outline: transparent;
+ position: relative;
+}
+
+button::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "Join Us";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #ff013c 5%);
+ text-shadow: -3px -3px 0px #0d0d02, 3px 3px 0px #000000;
+ clip-path: var(--slice-0);
+}
+
+button:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
