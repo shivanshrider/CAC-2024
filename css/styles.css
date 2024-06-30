@@ -2243,7 +2243,7 @@ button:hover::after {
 .nav {
   background-color: #000; /* Black background */
   color: #fff; /* White text color */
-  height: 70px; /* Fixed height of navbar */
+  height: 60px; /* Fixed height of navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
