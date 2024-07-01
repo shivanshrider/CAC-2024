@@ -2491,7 +2491,7 @@ button:hover::after {
 .carousel-wrapper {
   width: 100%;
   max-width: 100%;
-  aspect-ratio: 39/16;
+  aspect-ratio: 39/22;
   overflow: hidden;
   /* margin: 0 2rem; */
   position: relative;
