@@ -1417,9 +1417,9 @@ a.text-dark:hover {
     text-shadow: none !important;
     box-shadow: none !important;
   }
-  a:not(.btn) {
+  /* a:not(.btn) {
     text-decoration: underline;
-  }
+  } */
   blockquote {
     border: 1px solid #adb5bd;
     page-break-inside: avoid;
@@ -1664,7 +1664,7 @@ section#contact .section-heading {
   margin-left: 50%;
   margin-bottom: 5%;
 }
-.btn-carousel {
+/* .btn-carousel {
   color: #000;
   background-color: #9f0000;
   border-color: #7b0606;
@@ -1680,7 +1680,7 @@ section#contact .section-heading {
   color: #7e0404;
   background-color: #000;
   border-color: #000;
-}
+} */
 @media screen and (max-width: 450px) {
   .camera-img {
     width: 100%;
@@ -1882,7 +1882,7 @@ section#contact .section-heading {
  --slice-3: inset(10% -6px 85% 0);
  --slice-4: inset(40% -6px 43% 0);
  --slice-5: inset(80% -6px 5% 0);
- content: "Join Us";
+
  display: block;
  position: absolute;
  top: 0;
@@ -1993,7 +1993,6 @@ button::after {
  --slice-3: inset(10% -6px 85% 0);
  --slice-4: inset(40% -6px 43% 0);
  --slice-5: inset(80% -6px 5% 0);
- content: "Join Us";
  display: block;
  position: absolute;
  top: 0;
@@ -2509,9 +2508,16 @@ button:hover::after {
 .slide img {
   width: 100%;
   height: 100%;
+  filter: blur(2px);
   object-fit: cover;
+  transition: filter 0.3s ease, transform 0.3s ease;
   border-radius: inherit;
 }
+.slide:hover img {
+  filter: blur(0);
+  transform: scale(1.05);
+}
+
 
 /* .carousel-wrapper .btn {
   font-size: 2rem;
@@ -2529,16 +2535,16 @@ button:hover::after {
   background: rgba(0, 0, 0, 1);
 }
 
-.btn.previous {
+/* .btn.previous {
   top: 50%;
   left: 0;
 }
 .btn.next {
   top: 50%;
   right: 0;
-}
-.boton-elegante {
-  padding: 15px 30px;
+} */
+.join {
+  /* padding: 15px 30px; */
   border: 2px solid #2c2c2c;
   background-color: #1a1a1a;
   color: #ffffff;
@@ -2547,15 +2553,16 @@ button:hover::after {
   border-radius: 30px;
   transition: all 0.4s ease;
   outline: none;
-  position: relative;
-  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: bold;
-  margin: auto;
   text-align: center;
-  display: flex;
+  width: auto;
+  height: auto;
 }
-
-.boton-elegante::after {
+.join::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2571,11 +2578,11 @@ button:hover::after {
   transition: transform 0.5s ease;
 }
 
-.boton-elegante:hover::after {
+.join:hover::after {
   transform: scale(4);
 }
 
-.boton-elegante:hover {
+.join:hover {
   border-color: #666666;
   background: #292929;
 }
