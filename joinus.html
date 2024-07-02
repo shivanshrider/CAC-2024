@@ -1,5 +1,5 @@
 <html><head><meta charset="UTF-8"><title>CAC Club Joining Form</title>
-<link href="css/joinus.css" rel="stylesheet" type="text/css"><script src="js/joinus.js"></script>
+<link href="css/form.css" rel="stylesheet" type="text/css"><script src="js/validation.js"></script>
 </head><body class="zf-backgroundBg"><!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
 <div class="zf-templateWidth"><form action='https://forms.zohopublic.in/connectingallcirclescac/form/CACClubJoiningForm/formperma/4rdobNw-jrRXQAdYyiT_OqaZXNSImtsh94m6krfL0Pk/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
 <input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
@@ -74,11 +74,19 @@ Year
 <div class="zf-tempContDiv">
 <span> <input type="text" name="SingleLine2" checktype="c1" value="" maxlength="255" fieldType=1 placeholder="E.g.&#x3a;&#x20;Students&#x20;only"/></span> <p id="SingleLine2_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
 </div><div class="zf-clearBoth"></div></li><!---------Single Line Ends Here---------->
+<!---------Single Line Starts Here---------->
+<li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName"> 
+Domain/Interest 
+<em class="zf-important">*</em>
+</label>
+<div class="zf-tempContDiv">
+<span> <input type="text" name="SingleLine4" checktype="c1" value="" maxlength="255" fieldType=1 placeholder="E.g&#x3a;&#x20;AIML&#x2f;3D&#x20;Design"/></span> <p id="SingleLine4_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+</div><div class="zf-clearBoth"></div></li><!---------Single Line Ends Here---------->
 <!---------Description Starts Here---------->  
 <li class="zf-tempFrmWrapper zf-note"><label class="zf-descFld"><div>According to <b>University Policies under Pro-VC Academic Affairs</b>, Every member in the club has to pay 100₹ for the membership fee. We are taking the same into our Faculty Advisor account to avert the hassle. Please <b>Scan the QR to pay(Put note &quot;CAC Payment&quot;)</b>&nbsp;before submitting the form.<br /></div><div><br /></div><div>Upload the screenshot and write the transaction number after paying into the below column.<br /></div><div><br /></div></label>
 <div class="zf-clearBoth"></div></li><!---------Description Ends Here---------->  
 <!---------Description Starts Here---------->  
-<li class="zf-tempFrmWrapper zf-note"><label class="zf-descFld"><div><img src="assets/img/logos/Payment.png" alt="" width="150" height="148" style="" /> <br /></div></label>
+<li class="zf-tempFrmWrapper zf-note"><label class="zf-descFld"><div><img src="/api/downloadimagedesc?filepath=%2FnFIy9vJIR0JIaW8DJbi9jDie7eHORDLZO0OhRlVhTW4%2Fzeimage%2F1719809719822_PhonePeQR_HDFC_Bank_-_27700.png&amp;zaaidenc=fe63d132ef06b0af729fb345655b7f0c" alt="" width="150" height="148" style="" /> <br /></div></label>
 <div class="zf-clearBoth"></div></li><!---------Description Ends Here---------->  
 <!---------Single Line Starts Here---------->
 <li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName"> 
@@ -100,7 +108,7 @@ Transaction Number
 </ul></div><!---------template Container Starts Here---------->
 <ul><li class="zf-fmFooter"><button class="zf-submitColor" >Submit</button></li></ul></div><!-- 'zf-templateWrapper' ends --></form></div><!-- 'zf-templateWidth' ends -->
 <script type="text/javascript">var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
-var zf_MandArray = [ "PhoneNumber_countrycode", "Email", "SingleLine", "SingleLine1", "SingleLine3", "ImageUpload"]; 
-var zf_FieldArray = [ "Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "SingleLine", "SingleLine1", "SingleLine2", "SingleLine3", "ImageUpload"]; 
+var zf_MandArray = [ "PhoneNumber_countrycode", "Email", "SingleLine", "SingleLine1", "SingleLine4", "SingleLine3", "ImageUpload"]; 
+var zf_FieldArray = [ "Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "SingleLine", "SingleLine1", "SingleLine2", "SingleLine4", "SingleLine3", "ImageUpload"]; 
 var isSalesIQIntegrationEnabled = false;
 var salesIQFieldsArray = [];</script></body></html>
