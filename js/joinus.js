@@ -218,7 +218,7 @@ function zf_ValidateAndSubmit(){
 		if(urlValue !== null && typeof(urlValue) !== "undefined") {
 			urlValue = urlValue.replace(/^\s+|\s+$/g, '');
 			if(urlValue !== "") {
-      			var urlregex = new RegExp("^((((h|H)(t|T)|(f|F))(t|T)(p|P)((s|S)?)://[-.\\w:%@]*)|(((w|W){3}\\.)[-.\\w:%@]+)|((\\w+)([-\\w:%@]*)(\\.([-\\w:%@]+))+))(/[-\\w.?,:'/\\\\+=&;%$#@()!~]*)?$"); // This regex is taken from LiveFieldsUtil.isValidWebSiteFieldURL() method.
+      			var urlregex = new RegExp("^(((https|http|ftps|ftp)://[a-zA-Z\\d]+((_|-|@)[a-zA-Z\\d]+)*(\\.[a-zA-Z\\d]+((_|-|@)[a-zA-Z\\d]+)*)+(:\\d{1,5})?)|((w|W){3}(\\.[a-zA-Z\\d]+((_|-|@)[a-zA-Z\\d]+)*){2,}(:\\d{1,5})?)|([a-zA-Z\\d]+((_|-)[a-zA-Z\\d]+)*(\\.[a-zA-Z\\d]+((_|-)[a-zA-Z\\d]+)*)+(:\\d{1,5})?))(/[-\\w.?,:'/\\\\+=&;%$#@()!~]*)?$", "i"); // This regex is taken from LiveFieldsUtil.isValidWebSiteFieldURL() method. Changes: i) Add ^ at the beginning and $ at the end. ii) Remove ?i before https and adjust () around https. iii) Add "i" in the RegExp constructor. // No I18N
 				return(urlregex.test(urlValue));
 			}
         }
