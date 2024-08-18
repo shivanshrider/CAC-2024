@@ -2260,7 +2260,7 @@ button:hover::after {
 .nav {
   background-color: transparent; /* Transparent background */
   color: #fff; /* White text color */
-  height: 65px; /* Fixed height of navbar */
+  height: 65px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
