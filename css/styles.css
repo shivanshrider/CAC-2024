@@ -2258,7 +2258,7 @@ button:hover::after {
 /* Navigation Bar Styles */
 
 .nav {
-  background-color: #000; /* Black background */
+  background-color: transparent; /* Transparent background */
   color: #fff; /* White text color */
   height: 65px; /* Fixed height of navbar */
   display: flex;
@@ -2266,6 +2266,7 @@ button:hover::after {
   align-items: center;
   padding: 0 20px; /* Adjusted padding for left and right */
 }
+
 
 .nav-logo {
   max-width: 100px; /* Adjusted width for logo */
