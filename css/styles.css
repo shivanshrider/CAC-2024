@@ -2634,21 +2634,21 @@ button:hover::after {
   }
 }
 
-.carousel-wrapper .btn {
+/* .carousel-wrapper .btn {
   font-size: 2rem;
   background: none;
   color: #980505;
   border: none;
-  /* margin: 10px; */
-  position: absolute;
+  /* margin: 10px; */ */
+  /*position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   transition: color 0.3s, transform 0.3s;
-}
+}*/
 
-.carousel-wrapper .btn:hover {
-  color: #ffffff; /* Change color on hover */
+/*.carousel-wrapper .btn:hover {
+  color: #ffffff; 
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -2659,7 +2659,7 @@ button:hover::after {
 
 .btn.next {
   right: 20px;
-}
+}*/
 
 /* Responsive styles */
 @media (max-width: 1200px) {
