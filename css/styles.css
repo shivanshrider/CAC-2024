@@ -2258,7 +2258,7 @@ button:hover::after {
 /* Navigation Bar Styles */
 
 .nav {
-  background-color: #595858; /* Transparent background */
+  background-color: #c4c0c0; /* Transparent background */
   color: #6e0505; /* White text color */
   height: 65px; 
   display: flex;
