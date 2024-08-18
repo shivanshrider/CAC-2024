@@ -2333,7 +2333,7 @@ button:hover::after {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: #400808;
   margin: 5px;
   transition: transform 0.3s ease-in-out;
 }
