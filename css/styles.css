@@ -2310,14 +2310,14 @@ button:hover::after {
 
 .nav-items a {
   text-decoration: none;
-  color: #6e0505;
+  color: #8f0e0e;
   padding: 10px 15px; /* Adjust padding inside each menu item */
   font-weight: bold; /* Make nav-items bold */
   transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover transition */
 }
 
 .nav-items a:hover {
-  color: #000000; /* Red text color on hover */
+  color: #ffffff; /* Red text color on hover */
   background-color: rgba(255, 255, 255, 0.1); /* Add subtle background color on hover */
   border-radius: 5px; /* Rounded corners for menu items */
 }
