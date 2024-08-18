@@ -2259,7 +2259,7 @@ button:hover::after {
 
 .nav {
   background-color: transparent; /* Transparent background */
-  color: #fff; /* White text color */
+  color: #6e0505; /* White text color */
   height: 65px; 
   display: flex;
   justify-content: space-between;
