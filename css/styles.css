@@ -2521,7 +2521,7 @@ button:hover::after {
   height: 100%;
   /* border-radius: 12px; */
   position: absolute;
-  transition: transform 300ms ease-out;
+  /*transition: transform 300ms ease-out;*/
 }
 
 .slide img {
@@ -2529,13 +2529,13 @@ button:hover::after {
   height: 100%;
   filter: blur(2px);
   object-fit: cover;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  /*transition: filter 0.3s ease, transform 0.3s ease;*/
   border-radius: inherit;
 }
-.slide:hover img {
+/*.slide:hover img {
   filter: blur(0);
   transform: scale(1.05);
-}
+}*/
 
 
 
