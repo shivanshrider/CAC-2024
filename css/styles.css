@@ -2258,12 +2258,17 @@ button:hover::after {
 /* Navigation Bar Styles */
 
 .nav {
+  position: fixed;
+  top: 0;
   background-color: #c4c0c0; /* Transparent background */
   color: #6e0505; /* White text color */
   height: 65px; 
   display: flex;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 20px; /* Adjusted padding for left and right */
 }
 
@@ -2303,6 +2308,13 @@ button:hover::after {
 .nav-items li {
   margin-left: 15px; /* Adjust spacing between menu items */
 }
+.nav-items li a {
+  color: black;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+}
+
 
 .nav-items li:last-child {
   margin-right: 30px; /* Increased space after the last menu item */
@@ -2315,7 +2327,18 @@ button:hover::after {
   font-weight: bold; /* Make nav-items bold */
   transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover transition */
 }
+.nav-toggle {
+  display: none;
+}
 
+/* Change the Navbar background and text color on scroll */
+.scrolled .nav {
+  background-color: black;
+}
+
+.scrolled .nav-items li a {
+  color: white;
+}
 .nav-items a:hover {
   color: #ffffff; /* Red text color on hover */
   background-color: rgba(255, 255, 255, 0.1); /* Add subtle background color on hover */
