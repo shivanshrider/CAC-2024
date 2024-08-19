@@ -2258,17 +2258,14 @@ button:hover::after {
 /* Navigation Bar Styles */
 
 .nav {
-  position: fixed;
   top: 0;
   background-color: #c4c0c0; /* Transparent background */
   color: #6e0505; /* White text color */
   height: 65px; 
   display: flex;
   transition: background-color 0.3s ease;
-  z-index: 1000;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 20px; /* Adjusted padding for left and right */
 }
 
