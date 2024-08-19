@@ -2258,7 +2258,10 @@ button:hover::after {
 /* Navigation Bar Styles */
 
 .nav {
+  position: sticky;
   top: 0;
+  z-index: 1000;
+
   background-color: #c4c0c0; /* Transparent background */
   color: #6e0505; /* White text color */
   height: 65px; 
@@ -2267,6 +2270,8 @@ button:hover::after {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px; /* Adjusted padding for left and right */
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -2357,7 +2362,12 @@ button:hover::after {
   margin: 5px;
   transition: transform 0.3s ease-in-out;
 }
-
+@media (hover: none) and (pointer: coarse) {
+  .custom-nav-button:hover {
+    color: #ff0000;
+    background-color: #333;
+  }
+}
 @media only screen and (max-width: 768px) {
   .nav {
     height: auto; /* Adjust height to auto to accommodate logo and nav items */
