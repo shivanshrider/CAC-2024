@@ -2124,7 +2124,7 @@ button:hover::after {
   max-width: 300px; /* Max width of each counter */
   text-align: center;
   padding: 10px;
-  margin-bottom: 10px; /* Space between counters */
+  margin-bottom: 10px; 
 }
 
 .counter h3 {
