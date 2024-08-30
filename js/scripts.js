@@ -137,11 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     const heading = document.createElement("h2");
-    heading.textContent = "Phase 1 Results";
+    heading.textContent = "Slot 2 Results";
 
    
     const paragraph = document.createElement("p");
-    paragraph.textContent = "The results for Phase 1 are out for Miscellanous, Smart Education, Blockchain-Cybersecurity, Robotics-Drone. Please check the attached PDF for more details.";
+    paragraph.textContent = "The results for Slot 2 are out.  Please check the attached PDF for more details.";
 
   
     const pdfLink = document.createElement("a");
