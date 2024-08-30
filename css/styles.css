@@ -2262,7 +2262,7 @@ button:hover::after {
   top: 0;
   z-index: 1000;
 
-  background-color: #c4c0c0; /* Transparent background */
+  background-color: white; /* Transparent background */
   color: #6e0505; /* White text color */
   height: 65px; 
   display: flex;
@@ -2271,7 +2271,7 @@ button:hover::after {
   align-items: center;
   padding: 0 20px; /* Adjusted padding for left and right */
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 
