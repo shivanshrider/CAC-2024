@@ -137,11 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     const heading = document.createElement("h2");
-    heading.textContent = "Slot 2 Results";
+    heading.textContent = "Round 1 Results";
 
    
     const paragraph = document.createElement("p");
-    paragraph.textContent = "The results for Slot 2 are out.  Please check the attached PDF for more details.";
+    paragraph.textContent = "The results for Round 1 are out.  Please check the attached PDF for more details.";
 
   
     const pdfLink = document.createElement("a");
