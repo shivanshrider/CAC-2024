@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const pdfLink = document.createElement("a");
-    pdfLink.href = "/result/result2.pdf"; 
+    pdfLink.href = "/result/"; 
     pdfLink.target = "_blank";
     pdfLink.textContent = "Download Results PDF";
     pdfLink.style.display = "inline-block";
