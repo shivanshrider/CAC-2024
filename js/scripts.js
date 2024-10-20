@@ -62,36 +62,155 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// var mainListDiv = document.getElementById("mainListDiv"),
-//     mediaButton = document.getElementById("mediaButton");
 
-// mediaButton.onclick = function () {
+  
+  
+const slides = document.querySelectorAll("[data-slide]");
+const buttons = document.querySelectorAll("[data-button]");
+
+let currSlide = 0;
+let maxSlide = slides.length - 1;
+
+const updateCarousel = (number = 0) => {
+  slides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${(index - number) * 100}%)`;
+  });
+};
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.dataset.button == "next" ? ++currSlide : --currSlide;
+
+    if (currSlide > maxSlide) {
+      currSlide = 0;
+    } else if (currSlide < 0) {
+      currSlide = maxSlide;
+    }
+
+    updateCarousel(currSlide);
+  });
+});
+
+updateCarousel();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+ 
+    const modal = document.createElement("div");
+    modal.id = "resultModal";
+    modal.style.display = "none";
+    modal.style.position = "fixed";
+    modal.style.zIndex = "1000";
+    modal.style.left = "0";
+    modal.style.top = "0";
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.overflow = "auto";
+    modal.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+    modal.style.justifyContent = "center";
+    modal.style.alignItems = "center";
+    modal.style.display = "flex";
+
+   
+    const modalContent = document.createElement("div");
+    modalContent.style.backgroundColor = "white";
+    modalContent.style.padding = "20px";
+    modalContent.style.borderRadius = "8px";
+    modalContent.style.width = "80%";
+    modalContent.style.maxWidth = "500px";
+    modalContent.style.textAlign = "center";
+
+   
+    const closeBtn = document.createElement("span");
+    closeBtn.innerHTML = "&times;";
+    closeBtn.style.color = "#aaa";
+    closeBtn.style.float = "right";
+    closeBtn.style.fontSize = "28px";
+    closeBtn.style.fontWeight = "bold";
+    closeBtn.style.cursor = "pointer";
+    closeBtn.style.marginBottom = "10px";
+
+  
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Round 2 Results";
+
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = "The results for Round 2 (Final Round) are out.  Please check the attached PDF for more details.";
+
+
+    const pdfLink = document.createElement("a");
+    pdfLink.href = "/result/result2.pdf"; 
+    pdfLink.target = "_blank";
+    pdfLink.textContent = "Download Results PDF";
+    pdfLink.style.display = "inline-block";
+    pdfLink.style.marginTop = "20px";
+    pdfLink.style.padding = "10px 20px";
+    pdfLink.style.backgroundColor = "#28a745";
+    pdfLink.style.color = "white";
+    pdfLink.style.textDecoration = "none";
+    pdfLink.style.borderRadius = "5px";
+    pdfLink.style.cursor = "pointer";
+
+
+    pdfLink.onmouseover = function() {
+        pdfLink.style.backgroundColor = "#218838";
+    };
+    pdfLink.onmouseleave = function() {
+        pdfLink.style.backgroundColor = "#28a745";
+    };
+
+
+    modalContent.appendChild(closeBtn);
+    modalContent.appendChild(heading);
+    modalContent.appendChild(paragraph);
+    modalContent.appendChild(pdfLink);
+
+
+    modal.appendChild(modalContent);
+
+
+    document.body.appendChild(modal);
+
+
+    const modalBtn = document.createElement("button");
+    modalBtn.id = "resultModalBtn";
+    modalBtn.textContent = "View Phase 2 (Final) Results";
+    modalBtn.style.padding = "10px 20px";
+    modalBtn.style.fontSize = "16px";
+    modalBtn.style.cursor = "pointer";
+    modalBtn.style.backgroundColor = "#007bff";
+    modalBtn.style.color = "white";
+    modalBtn.style.border = "none";
+    modalBtn.style.borderRadius = "5px";
+    modalBtn.style.margin = "20px";
+
+
+    modalBtn.onmouseover = function() {
+        modalBtn.style.backgroundColor = "#0056b3";
+    };
+    modalBtn.onmouseleave = function() {
+        modalBtn.style.backgroundColor = "#007bff";
+    };
+
+
+    modalBtn.onclick = function() {
+        modal.style.display = "flex";
+    };
+
+
+    document.body.appendChild(modalBtn);
+
+
+    setTimeout(() => {
+        modal.style.display = "flex";
+    }, 2000); 
+});
+
     
-//     "use strict";
-    
-//     mainListDiv.classList.toggle("show_list");
-//     mediaButton.classList.toggle("active");
-    
-// };
 
-// const navToggle = document.querySelector('.nav-toggle');
-// const navItems = document.querySelector('.nav-items');
 
-// navToggle.addEventListener('click', () => {
-//   navToggle.classList.toggle('active');
-//   navItems.classList.toggle('active');
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const mediaButton = document.getElementById('mediaButton');
-//     const mainListDiv = document.getElementById('mainListDiv');
-  
-//     mediaButton.addEventListener('click', function() {
-//       this.classList.toggle('active');
-//       mainListDiv.classList.toggle('active');
-//     });
-//   });
-
-  
-  
-  
